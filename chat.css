@@ -1,0 +1,80 @@
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: rgb(13, 254, 0);
+    display: grid;
+    grid-template-rows: 100px 1fr 50px;
+    height: 100vh;
+  }
+
+  header {
+    background-image: linear-gradient(120deg, #000000, #f50808);
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 0 20px;
+    background-color: #333;
+    color: white;
+  }
+  .foto {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+  }
+
+  main .mensagem1 {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #146108;
+    color: white;
+    max-width: 50%;
+  }
+
+  main .mensagem2 {
+    display: grid;
+    margin-left: auto;
+    margin-right: 10px;
+    grid-template-rows: 1fr auto;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #1b6f10;
+    color: white;
+    max-width: 50%;
+  }
+
+  main .mensagem1 .horario {
+    margin: .5rem 0 0 0;
+    padding: .5rem 0 0 0;
+    font-style:italic
+    border-top: 1px solid rgba(255, 255, 255, .5);
+  }
+
+  main .mensagem2 .horario {
+    margin: .5rem 0 0 0;
+    padding: .5rem 0 0 0;
+    font-style: italic;
+    border-top: 1px solid rgba(255, 255, 255, .5);
+  }
+  
+  footer  {
+    margin-left: 5px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+
+  .enviar {
+    background-image: linear-gradient(130deg, #000000, #eb3e0f);
+    color:white;
+  }
+
+  h1 {
+    font-family:'Times New Roman', Times, serif;
+  }

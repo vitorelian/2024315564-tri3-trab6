@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="chat.css">
+  <title>Chat</title>
+</head>
+
+<body>
+  <header>
+    <img class="foto" src="imgs/vivi/vivi2 (8).jpg">
+    <h1>Vivi chat</h1>
+  </header>
+  <main>
+    <div class="mensagem1">
+      <div class="content">
+        Tem paes?
+      </div>
+      <div class="horario">
+        22:56
+      </div>
+    </div>
+    
+    <div class="mensagem2">
+      <div class="content">
+        Nães
+      </div>
+      <div class="horario">
+        22:57
+      </div>
+    </div>
+  </main>
+  <footer>
+    <input type="texto">
+    <button class="enviar">Enviar</button>
+  </footer>
+<script>
+const mains = document.querySelector('main') 
+const input = document.querySelector('input')
+const input = document.querySelector('button')
+
+let currentNick = null
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat WebSocket</title>
+  <style>
+    /* Seu estilo CSS pode ser adicionado aqui */
+  </style>
+</head>
+<body>
+  <div id="main"></div>
+  <input id="input" type="text" />
+  <button id="button">Enviar</button>
+
+  <script>
+    const main = document.getElementById('main');
+    const input = document.getElementById('input');
+    const button = document.getElementById('button');
+    
+    let currentNick = 'Usuario';  // Nome do usuário padrão
+
+    function addMessage(content, nick, time) {
+      main.innerHTML += `
+        <div class="message ${currentNick === nick ? 'owner' : ''}">
+          <div class="content">${content}</div>
+          <div class="nick">${nick}</div>
+          <div class="time">${time}</div>
+        </div>
+      `;
+    }
+
+    const ws = new WebSocket('ws://192.168.120.53:4000');  // URL correta
